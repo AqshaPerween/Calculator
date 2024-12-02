@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Calculator</title>
+</head>
+<body class="bg-gray-500 flex items-center justify-center h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-80">
+        <input 
+            type="text" 
+            id="display" 
+            placeholder="0" 
+            class="w-full text-right mb-4 text-2xl p-2 border border-gray-300 rounded"
+            readonly
+        >
+        <div class="grid grid-cols-4 gap-2">
+            <button class="bg-gray-200 p-4 rounded" onclick="clearDisplay()">AC</button>
+            <button class="bg-gray-200 p-4 rounded" onclick="deleteLast()">C</button>
+            <button class="bg-gray-200 p-4 rounded" onclick="append('%')">%</button>
+            <button class="bg-orange-400 p-4 rounded text-white" onclick="append('/')">÷</button>
+
+            <button class="bg-gray-200 p-4 rounded" onclick="append('7')">7</button>
+            <button class="bg-gray-200 p-4 rounded" onclick="append('8')">8</button>
+            <button class="bg-gray-200 p-4 rounded" onclick="append('9')">9</button>
+            <button class="bg-orange-400 p-4 rounded text-white" onclick="append('*')">×</button>
+
+            <button class="bg-gray-200 p-4 rounded" onclick="append('4')">4</button>
+            <button class="bg-gray-200 p-4 rounded" onclick="append('5')">5</button>
+            <button class="bg-gray-200 p-4 rounded" onclick="append('6')">6</button>
+            <button class="bg-orange-400 p-4 rounded text-white" onclick="append('-')">-</button>
+
+            <button class="bg-gray-200 p-4 rounded" onclick="append('1')">1</button>
+            <button class="bg-gray-200 p-4 rounded" onclick="append('2')">2</button>
+            <button class="bg-gray-200 p-4 rounded" onclick="append('3')">3</button>
+            <button class="bg-orange-400 p-4 rounded text-white" onclick="append('+')">+</button>
+
+            <button class="bg-gray-200 p-4 rounded" onclick="append('00')">00</button>
+            <button class="bg-gray-200 p-4 rounded" onclick="append('0')">0</button>
+            <button class="bg-gray-200 p-4 rounded" onclick="append('.')">.</button>
+            <button class="bg-orange-400 p-4 rounded text-white" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+        
+</body>
+</html>
